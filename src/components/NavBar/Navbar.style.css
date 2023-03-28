@@ -1,7 +1,7 @@
 .navbar-container {
     background-color: black;
     color: #ffffff;
-    padding: 22px;
+    padding: 22px 22px 44px 22px;
     display: flex;
     justify-content: space-between;
 }

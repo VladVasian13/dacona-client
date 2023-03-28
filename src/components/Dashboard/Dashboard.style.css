@@ -1,0 +1,43 @@
+.dashboard-container {
+    background-color: black;
+    color: white;
+    display: flex;
+}
+
+.left-container {
+    width: 50%;
+    min-width: 650px;
+    padding: 65px;
+}
+
+.left-container h1 {
+    font-weight: 400;
+    font-size: 64px;
+    padding-bottom: 35px;
+    line-height: 90px;
+}
+
+.left-container p {
+    color: #A1A1AA;
+    font-size: 18px;
+    width: 60%;
+    min-width: 300px;
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px;
+    gap: 60px;
+    font-size: 24px;
+}
+
+.right-container div {
+    color: #71717A;
+}
+
+.search-container {
+    padding: 60px 0px;
+}
