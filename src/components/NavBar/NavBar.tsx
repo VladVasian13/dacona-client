@@ -5,6 +5,7 @@ import { Popover } from "@mui/material";
 import { ArrowDown } from "../../assets/svg/ArrowDown";
 import { useNavigate } from "react-router-dom";
 import Language from "../Language/Language";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
 
@@ -12,6 +13,7 @@ const NavBar = () => {
     const [anchorProd, setAnchorProd] = useState<HTMLElement | null>(null)
 
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     const handleClickProducts = (e: React.MouseEvent<HTMLElement>) => {
         setAnchorProd(e.currentTarget)
@@ -35,7 +37,7 @@ const NavBar = () => {
                             role="button"
                             onClick={handleClickProducts}
                         >
-                            Products
+                            {t("products")}
                             <ArrowDown />
                         </div>
                         <Popover
@@ -73,21 +75,21 @@ const NavBar = () => {
                         <div
                             role="button"
                         >
-                            Features
+                            {t("features")}
                         </div>
                     </li>
                     <li>
                         <div
                             role="button"
                         >
-                            Pricing
+                            {t("pricing")}
                         </div>
                     </li>
                     <li>
                         <div
                             role="button"
                         >
-                            Support
+                            {t("support")}
                         </div>
                     </li>
                 </ul>
