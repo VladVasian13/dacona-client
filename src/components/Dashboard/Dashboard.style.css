@@ -2,18 +2,18 @@
     background-color: black;
     color: white;
     display: flex;
+    padding-top: 40px;
 }
 
 .left-container {
     width: 50%;
-    min-width: 650px;
     padding: 65px;
 }
 
 .left-container h1 {
     font-weight: 400;
     font-size: 64px;
-    padding-bottom: 35px;
+    padding-bottom: 65px;
     line-height: 90px;
 }
 
@@ -22,6 +22,7 @@
     font-size: 18px;
     width: 60%;
     min-width: 300px;
+    line-height: 28px;
 }
 
 .right-container {
@@ -39,5 +40,35 @@
 }
 
 .search-container {
-    padding: 60px 0px;
+    padding: 130px 0px;
+    width: 100%;
+    min-width: 300px;
+}
+
+.searchButton {
+    border-radius: 60px;
+    height: 70px;
+    width: 350px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1200px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .left-container {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .right-container {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .left-container p {
+        width: 100%;
+    }
 }
