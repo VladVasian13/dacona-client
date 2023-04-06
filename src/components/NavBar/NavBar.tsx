@@ -57,7 +57,10 @@ const NavBar = () => {
                         >
                             <div className="dropdown-container">
                                 <ul>
-                                    <li className="dropdown-element">
+                                    <li
+                                        className="dropdown-element"
+                                        onClick={(e) => { navigate("/teltonika"); handleClickProducts(e) }}
+                                    >
                                         <div>
                                             Teltonika
                                         </div>
