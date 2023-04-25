@@ -23,7 +23,18 @@
 .nav-content {
     display: flex;
     align-items: center;
+    background-color: black;
 }
+
+.nav-list-mobile {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    gap: 60px;
+    align-items: center;
+    background-color: black;
+}
+
 
 .nav-list li {
     list-style-type: none;
@@ -76,8 +87,24 @@
     align-items: center;
 }
 
+.nav-elements-mobile {
+    width: 100%;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1200px) {
     .nav-content {
+        display: none;
+    }
+
+    .language-change {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .nav-mobile {
         display: none;
     }
 
