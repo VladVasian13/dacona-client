@@ -7,7 +7,7 @@
 
 .left-container {
     width: 50%;
-    padding: 65px;
+    padding: 20px 65px;
 }
 
 .left-container h1 {
@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 65px;
+    padding: 20px 65px;
     gap: 60px;
     font-size: 24px;
 }

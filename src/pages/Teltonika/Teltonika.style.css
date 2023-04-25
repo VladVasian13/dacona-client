@@ -1,0 +1,117 @@
+.teltonika-container {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    padding-top: 50px;
+}
+
+.cards-container {
+    color: #FFFFFF;
+    padding: 80px 20%;
+    display: flex;
+    gap: 50px;
+}
+
+.routers-card {
+    width: 600px;
+    height: 500px;
+}
+
+.routers-card:hover {
+    transform: scale(1.05);
+}
+
+.switches-card {
+    width: 100%;
+    height: 100%;
+}
+
+.switches-card:hover {
+    transform: scale(1.05);
+}
+
+.gateway-card {
+    width: 100%;
+    height: 100%;
+}
+
+.gateway-card:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    background-color: #292929;
+    border-radius: 30px;
+    padding: 30px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.gate-switch-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    width: 50%;
+}
+
+.pictures {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+.pictures-second {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.router-1 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+.router-2 {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    right: -50px;
+}
+
+.router-3 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+}
+
+.switch-gateway {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -35px;
+    left: 35%;
+}
+
+.info-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-title h1 {
+    font-size: 36px;
+}
+
+.info-title p {
+    font-size: 20px;
+}
