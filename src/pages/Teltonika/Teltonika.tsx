@@ -1,8 +1,6 @@
 import React from "react";
 import Teltonika from "../../assets/images/teletonika.png"
-import Router1 from "../../assets/images/router1.png"
-import Router2 from "../../assets/images/router2.png"
-import Router3 from "../../assets/images/router3.png"
+import Routers from "../../assets/images/routers.png"
 import Switch from "../../assets/images/switch.png"
 import Gateway from "../../assets/images/gateway.png"
 import './Teltonika.style.css'
@@ -14,10 +12,7 @@ const TeltonikaPage = () => {
             <div className="cards-container">
                 <div className="routers-card card">
                     <div className="pictures">
-                        <img src={Router1} alt="Router1" className="router-1" />
-                        <img src={Router2} alt="Router2" className="router-2" />
-                        <img src={Router3} alt="Router3" className="router-3" />
-                    </div>
+                        <img src={Routers} alt="Router1" className="router-1" />                    </div>
                     <div className="info-title">
                         <h1>
                             Routers

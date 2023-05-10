@@ -22,8 +22,9 @@
 }
 
 .switches-card {
-    width: 100%;
+    width: 60%;
     height: 100%;
+    min-width: 500px;
 }
 
 .switches-card:hover {
@@ -31,8 +32,9 @@
 }
 
 .gateway-card {
-    width: 100%;
+    width: 60%;
     height: 100%;
+    min-width: 500px;
 }
 
 .gateway-card:hover {
@@ -52,7 +54,6 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 50px;
-    width: 50%;
 }
 
 .pictures {
@@ -68,27 +69,9 @@
 }
 
 .router-1 {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0px;
-}
-
-.router-2 {
-    width: 350px;
-    height: 300px;
-    position: absolute;
-    top: 0;
-    right: -50px;
-}
-
-.router-3 {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    bottom: 0;
-    left: 80px;
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
 }
 
 .switch-gateway {

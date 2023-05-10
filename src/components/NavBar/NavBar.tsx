@@ -72,11 +72,6 @@ const NavBar = () => {
                                                 Teltonika
                                             </div>
                                         </li>
-                                        <li className="dropdown-element">
-                                            <div>
-                                                Hikvision
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                             </Popover>
