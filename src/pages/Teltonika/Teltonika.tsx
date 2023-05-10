@@ -4,13 +4,17 @@ import Routers from "../../assets/images/routers.png"
 import Switch from "../../assets/images/switch.png"
 import Gateway from "../../assets/images/gateway.png"
 import './Teltonika.style.css'
+import { useNavigate } from "react-router-dom";
 
 const TeltonikaPage = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="teltonika-container">
             <img src={Teltonika} alt="Teltonika" style={{ width: "35%", padding: "0px 50px" }} />
             <div className="cards-container">
-                <div className="routers-card card">
+                <div className="routers-card card" onClick={() => navigate('/teltonika/routers')}>
                     <div className="pictures">
                         <img src={Routers} alt="Router1" className="router-1" />                    </div>
                     <div className="info-title">
