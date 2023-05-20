@@ -6,8 +6,8 @@ if (process.env.NODE_ENV === "development") {
     url = process.env.REACT_APP_PROD!
 }
 
-export const getProducts = async () => {
-    const response = await fetch(`${url}products`)
+export const getRouters = async () => {
+    const response = await fetch(`${url}routers`)
     const products = await response.json()
 
     return products
