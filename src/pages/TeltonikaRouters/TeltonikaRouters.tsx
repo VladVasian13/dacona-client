@@ -44,20 +44,22 @@ const TeltonikaRouters = () => {
                     {routers.map((router: any, idx) => {
                         return (
                             <Grid item xs={3} key={idx} sx={{ minWidth: 280, maxWidth: "400px !important" }}>
-                                <Card sx={{ height: "100%", minWidth: 280, maxWidth: 400, backgroundColor: "rgb(18, 18, 18)", color: "#FFFFFF" }}>
+                                <Card sx={{
+                                    display: "flex", alignItems: "center", justifyContent: "space-between", height: "100%", minWidth: 280, maxWidth: 400, backgroundColor: "rgb(18, 18, 18)", color: "#FFFFFF", flexDirection: "column"
+                                }}>
                                     <CardContent>
                                         <Typography sx={{ fontSize: 24 }} color={"#FFFFF"} gutterBottom>
                                             {router.name}
                                         </Typography>
-                                        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                            <img src={require('../../assets/images/' + router.name + '.png')} alt={router.name} style={{ width: "100%", height: "100%" }} />
+                                        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "250px" }}>
+                                            <img src={process.env.NODE_ENV === "development" ? require('../../assets/images/' + router.name + '.png') : 'https://www.dacona.ro/static/media/' + router.name + '.png'} alt={router.name} style={{ width: "100%", height: "100%" }} />
                                         </Box>
                                         <Typography variant="body2" color="#6E798C">
                                             {router.description}
                                         </Typography>
                                     </CardContent>
-                                    <CardActions>
-                                        <Button size="small" variant='contained' sx={{ margin: "auto", marginBottom: 2, marginTop: 2, backgroundColor: "#008478", padding: 1 }}>Mode details</Button>
+                                    <CardActions sx={{ height: "100px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                        <Button size="small" variant='contained' sx={{ backgroundColor: "#008478", padding: 1 }}>Mode details</Button>
                                     </CardActions>
                                 </Card>
                             </Grid>

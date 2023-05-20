@@ -4,6 +4,8 @@ import Home from './pages/Home/Home';
 import TeltonikaPage from './pages/Teltonika/Teltonika';
 import NavBar from './components/NavBar/NavBar';
 import TeltonikaRouters from './pages/TeltonikaRouters/TeltonikaRouters';
+import TeltonikaSwitches from './pages/TeltonikaSwitches/TeltonikaSwitches';
+import TeltonikaGateways from './pages/TeltonikaGateways/TeltonikaGateways';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/teltonika" element={<TeltonikaPage />} />
         <Route path="/teltonika/routers" element={<TeltonikaRouters />} />
+        <Route path="/teltonika/switches" element={<TeltonikaSwitches />} />
+        <Route path="/teltonika/gateways" element={<TeltonikaGateways />} />
       </Routes>
     </>
   );
