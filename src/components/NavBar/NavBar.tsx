@@ -4,7 +4,6 @@ import { Logo } from "../../assets/svg/Logo";
 import { Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Popover } from "@mui/material";
 import { ArrowDown } from "../../assets/svg/ArrowDown";
 import Inventory2Icon from '@mui/icons-material/Inventory2';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import RouterIcon from '@mui/icons-material/Router';
 import HelpIcon from '@mui/icons-material/Help';
 import { useNavigate } from "react-router-dom";
