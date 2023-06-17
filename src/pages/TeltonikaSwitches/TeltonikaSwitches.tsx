@@ -57,7 +57,7 @@ const TeltonikaSwitches = () => {
                                             {
                                                 switches.datasheet &&
                                                 <Tooltip title="Download datasheet">
-                                                    <IconButton size="small" sx={{ backgroundColor: "#008478", padding: 1, "&:hover": { backgroundColor: "#034640" }, color: "#FFFFF" }} component={Link} href={switches.datasheet}><DownloadIcon /></IconButton>
+                                                    <IconButton size="small" sx={{ backgroundColor: "#008478", padding: 1, "&:hover": { backgroundColor: "#034640" }, color: "#FFFFFF" }} component={Link} href={switches.datasheet}><DownloadIcon /></IconButton>
                                                 </Tooltip>
                                             }
                                         </Box>
