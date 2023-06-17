@@ -7,7 +7,8 @@
 
 .cards-container {
     color: #FFFFFF;
-    padding: 80px 20%;
+    justify-content: center;
+    margin-top: 64px;
     display: flex;
     gap: 50px;
 }

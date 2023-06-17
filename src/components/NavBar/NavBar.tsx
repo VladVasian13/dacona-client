@@ -87,13 +87,6 @@ const NavBar = () => {
                             <div
                                 role="button"
                             >
-                                {t("pricing")}
-                            </div>
-                        </li>
-                        <li>
-                            <div
-                                role="button"
-                            >
                                 {t("support")}
                             </div>
                         </li>
@@ -130,14 +123,6 @@ const NavBar = () => {
                                         <RouterIcon sx={{ color: "#ffffff" }} />
                                     </ListItemIcon>
                                     <ListItemText primary={'Features'} />
-                                </ListItemButton>
-                            </ListItem>
-                            <ListItem key={'Pricing'} disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        <LocalOfferIcon sx={{ color: "#ffffff" }} />
-                                    </ListItemIcon>
-                                    <ListItemText primary={'Pricing'} />
                                 </ListItemButton>
                             </ListItem>
                             <ListItem key={'Support'} disablePadding>

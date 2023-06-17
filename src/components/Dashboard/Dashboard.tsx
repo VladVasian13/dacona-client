@@ -40,7 +40,7 @@ const Dashboard = () => {
                                     borderColor: "#6DDCFF",
                                 }
                             },
-                            width: "60%",
+                            width: "100%",
                             "@media only screen and (max-width: 768px)": {
                                 width: "100%"
                             }
