@@ -61,7 +61,7 @@ const TeltonikaRouters = () => {
                                             }
                                         </Box>
                                         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "250px" }}>
-                                            <img src={process.env.NODE_ENV === "development" ? require('../../assets/images/' + router.name + '.png') : 'https://www.dacona.ro/static/media/' + router.name + '.png'} alt={router.name} style={{ width: "100%", height: "100%" }} />
+                                            <img src={process.env.NODE_ENV === "development" ? require('../../assets/images/' + router.name + '.png') : 'https://www.dacona.ro/static/media/' + router.name + '.png'} alt={router.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                                         </Box>
                                         <Typography variant="body2" color="#6E798C">
                                             {router.description}

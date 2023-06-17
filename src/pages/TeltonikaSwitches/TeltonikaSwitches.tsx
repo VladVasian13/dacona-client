@@ -62,7 +62,7 @@ const TeltonikaSwitches = () => {
                                             }
                                         </Box>
                                         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "250px" }}>
-                                            <img src={process.env.NODE_ENV === "development" ? require('../../assets/images/' + switches.name + '.png') : 'https://www.dacona.ro/static/media/' + switches.name + '.png'} alt={switches.name} style={{ width: "100%", height: "100%" }} />
+                                            <img src={process.env.NODE_ENV === "development" ? require('../../assets/images/' + switches.name + '.png') : 'https://www.dacona.ro/static/media/' + switches.name + '.png'} alt={switches.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                                         </Box>
                                         <Typography variant="body2" color="#6E798C">
                                             {switches.description}
