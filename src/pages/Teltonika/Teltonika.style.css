@@ -8,35 +8,34 @@
 .cards-container {
     color: #FFFFFF;
     justify-content: center;
-    margin-top: 64px;
+    align-items: center;
+    padding: 64px 32px 0px 32px;
     display: flex;
     gap: 50px;
 }
 
 .routers-card {
-    width: 600px;
-    height: 500px;
+    height: 545px;
+}
+
+.switches-card {
+    height: 250px;
+    width: 400px;
+}
+
+.gateway-card {
+    height: 250px;
 }
 
 .routers-card:hover {
     transform: scale(1.05);
 }
 
-.switches-card {
-    width: 60%;
-    height: 100%;
-    min-width: 500px;
-}
 
 .switches-card:hover {
     transform: scale(1.05);
 }
 
-.gateway-card {
-    width: 60%;
-    height: 100%;
-    min-width: 500px;
-}
 
 .gateway-card:hover {
     transform: scale(1.05);
@@ -59,8 +58,10 @@
 
 .pictures {
     position: relative;
-    width: 100%;
-    height: 80%;
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pictures-second {
@@ -79,8 +80,8 @@
     position: absolute;
     width: 150px;
     height: 150px;
-    top: -35px;
-    left: 35%;
+    top: -25px;
+    left: 25%;
 }
 
 .info-title {
@@ -98,4 +99,15 @@
 
 .info-title p {
     font-size: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gate-switch-container {
+        height: 600px
+    }
 }

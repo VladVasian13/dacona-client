@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.style.css"
 import { Logo } from "../../assets/svg/Logo";
-import { Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Popover } from "@mui/material";
+import { Box, Collapse, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Popover } from "@mui/material";
 import { ArrowDown } from "../../assets/svg/ArrowDown";
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import RouterIcon from '@mui/icons-material/Router';
@@ -10,12 +10,15 @@ import { useNavigate } from "react-router-dom";
 import Language from "../Language/Language";
 import { useTranslation } from "react-i18next";
 import MenuIcon from '@mui/icons-material/Menu';
+import { ExpandLess, ExpandMore, StarBorder } from "@mui/icons-material";
+import HomeIcon from '@mui/icons-material/Home';
 
 const NavBar = () => {
 
     const [popoverOpened, setPopoverOpened] = useState(false);
     const [anchorProd, setAnchorProd] = useState<HTMLElement | null>(null)
     const [openDrawer, setOpenDrawer] = useState(false)
+    const [open, setOpen] = React.useState(true);
 
     const navigate = useNavigate();
     const { t } = useTranslation();
@@ -25,6 +28,9 @@ const NavBar = () => {
         setPopoverOpened(!popoverOpened)
     }
 
+    const handleClick = () => {
+        setOpen(!open);
+    };
 
     return (
         <>
@@ -82,7 +88,7 @@ const NavBar = () => {
                                 {t("features")}
                             </div>
                         </li>
-                        <li>
+                        <li onClick={(e) => { navigate("/support") }}>
                             <div
                                 role="button"
                             >
@@ -108,14 +114,33 @@ const NavBar = () => {
                         sx={{ width: 250, backgroundColor: "black", height: "100%", color: "#ffffff" }}
                     >
                         <List>
+                            <ListItem key={'Home'} disablePadding>
+                                <ListItemButton onClick={(e) => { navigate("/") }}>
+                                    <ListItemIcon>
+                                        <HomeIcon sx={{ color: "#ffffff" }} />
+                                    </ListItemIcon>
+                                    <ListItemText primary={'Home'} />
+                                </ListItemButton>
+                            </ListItem>
                             <ListItem key={'Products'} disablePadding>
-                                <ListItemButton>
+                                <ListItemButton onClick={handleClick}>
                                     <ListItemIcon>
                                         <Inventory2Icon sx={{ color: "#ffffff" }} />
                                     </ListItemIcon>
                                     <ListItemText primary={'Products'} />
+                                    {open ? <ExpandLess /> : <ExpandMore />}
                                 </ListItemButton>
                             </ListItem>
+                            <Collapse in={open} timeout="auto" unmountOnExit>
+                                <List component="div" disablePadding>
+                                    <ListItemButton sx={{ pl: 4 }} onClick={(e) => { navigate("/teltonika") }}>
+                                        <ListItemIcon>
+                                            <StarBorder />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Teltonika" />
+                                    </ListItemButton>
+                                </List>
+                            </Collapse>
                             <ListItem key={'Features'} disablePadding>
                                 <ListItemButton>
                                     <ListItemIcon>
@@ -138,7 +163,7 @@ const NavBar = () => {
                             <ListItem key={"language"} disablePadding>
                                 <ListItemButton>
                                     <ListItemIcon>
-                                        TT
+                                        {"  "}
                                     </ListItemIcon>
                                     <Language />
                                 </ListItemButton>

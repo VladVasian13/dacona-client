@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 import TeltonikaRouters from './pages/TeltonikaRouters/TeltonikaRouters';
 import TeltonikaSwitches from './pages/TeltonikaSwitches/TeltonikaSwitches';
 import TeltonikaGateways from './pages/TeltonikaGateways/TeltonikaGateways';
+import Support from './pages/Support/Support';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/teltonika/routers" element={<TeltonikaRouters />} />
         <Route path="/teltonika/switches" element={<TeltonikaSwitches />} />
         <Route path="/teltonika/gateways" element={<TeltonikaGateways />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
     </>
   );

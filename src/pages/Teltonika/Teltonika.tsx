@@ -49,7 +49,7 @@ const TeltonikaPage = () => {
                 </Box>
                 :
                 <div className="teltonika-container">
-                    <img src={Teltonika} alt="Teltonika" style={{ width: "35%", padding: "0px 50px" }} />
+                    <img src={Teltonika} alt="Teltonika" style={{ width: "600px", padding: "0px 50px" }} />
                     <div className="cards-container">
                         <div className="routers-card card" onClick={() => navigate('/teltonika/routers')}>
                             <div className="pictures">
