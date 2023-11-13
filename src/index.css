@@ -10,3 +10,29 @@ body {
   height: 100%;
   background-color: #000000;
 }
+
+.image-gallery {
+  width: 40%;
+  height: auto;
+}
+
+.image-gallery-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center center;
+}
+
+.fullscreen .image-gallery-slide img {
+  max-height: 100vh;
+}
+
+@media only screen and (max-width: 800px) {
+  .image-gallery {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+}

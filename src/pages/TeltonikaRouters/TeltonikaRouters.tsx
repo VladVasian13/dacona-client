@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { getRouters } from '../../api/api';
 import { Box, Breadcrumbs, Button, Card, CardActions, CardContent, CircularProgress, Grid, IconButton, Link, Tooltip, Typography } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
+import { useNavigate } from 'react-router-dom';
 
 const TeltonikaRouters = () => {
+
+    const navigate = useNavigate();
 
     const [routers, setRouters] = useState([]);
     const [isLoading, setLoading] = useState(false);
@@ -41,7 +44,7 @@ const TeltonikaRouters = () => {
                     <CircularProgress size="3rem" color='info' />
                 </Box>
                 :
-                <Grid container spacing={4} sx={{ padding: "20px 0px 0px 40px" }}>
+                <Grid container spacing={4} sx={{ padding: "20px 0px 0px 40px", "@media only screen and (max-width: 1000px)": { marginLeft: 0, width: "100%", padding: "20px" } }}>
                     {routers.map((router: any, idx) => {
                         return (
                             <Grid item xs={3} key={idx} sx={{ minWidth: 300, maxWidth: "400px !important" }}>
@@ -68,7 +71,7 @@ const TeltonikaRouters = () => {
                                         </Typography>
                                     </CardContent>
                                     <CardActions sx={{ height: "100px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                        <Button size="small" variant='contained' sx={{ backgroundColor: "#008478", padding: 1, "&:hover": { backgroundColor: "#034640" } }}>Mode details</Button>
+                                        <Button size="small" variant='contained' onClick={() => { navigate(`/teltonika/routers/${router.id}`) }} sx={{ backgroundColor: "#008478", padding: 1, "&:hover": { backgroundColor: "#034640" } }}>More details</Button>
                                     </CardActions>
                                 </Card>
                             </Grid>

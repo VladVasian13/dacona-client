@@ -6,5 +6,22 @@
     "features": "Features",
     "pricing": "Pricing",
     "support": "Support",
-    "homeDescription": "Hello! We are Dacona, a Romanian company which distributes, sells and work with different types of network and security devices. Our main brand is called Teltonika | Networks ,a Lithuanian company which sells different types of industrial routers, gateways, switches and modems."
+    "homeDescription": "Hello! We are Dacona, a Romanian company which distributes, sells and work with different types of network and security devices. Our main brand is called Teltonika | Networks ,a Lithuanian company which sells different types of industrial routers, gateways, switches and modems.",
+    "networkSecurityProtection": "Network, security, protection",
+    "findAProduct": "FIND A PRODUCT",
+    "daconaMostPopular": "Dacona most popular selling brand",
+    "searchForProducts": "Search for products",
+    "aboutUs": "About us",
+    "footerDescription": "We are Dacona, dedicated to providing the best service to our customers.Our main brand is called Teltonika | Networks ,a Lithuanian company which sells different types of industrial routers, gateways, switches and modems.",
+    "contactUs": "Contact Us",
+    "phone": "Phone",
+    "address": "Address",
+    "requestAnOffer": "Request an offer",
+    "name": "Name",
+    "message": "Message",
+    "sendRequest": "Send request",
+    "mailHasBeenSent": "Mail has been sent!",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "productsLabel": "products"
 }

@@ -6,8 +6,13 @@ import L from "leaflet"
 import MarkerPic from "../../assets/images/marker.png"
 import 'leaflet/dist/leaflet.css';
 import { AlternateEmail, LocalPhone, LocationOn } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
+import { Helmet } from 'react-helmet'
 
 const Support = () => {
+
+    const { t } = useTranslation();
+
     const form: any = useRef();
 
     const [isLoading, setIsLoading] = useState(false);
@@ -34,22 +39,33 @@ const Support = () => {
 
     return (
         <>
-            <Box sx={{ color: "white", pl: 5 }}>
-                <Typography sx={{ fontSize: "28px" }}>
-                    Contact us
+            <Helmet>
+                <meta charSet="utf-8" />
+                <meta name="description" content="If you want to order something from us. You can reach us on telephone or via email through the support form." />
+                <title>Support</title>
+                <link rel="canonical" href="http://dacona.ro/support" />
+            </Helmet>
+            <Box sx={{ color: "white", "@media only screen and (max-width: 1000px)": { pl: 5, p: 2 } }}>
+                <Typography sx={{ fontSize: "28px", "@media only screen and (max-width: 1000px)": { mb: "10px" } }}>
+                    {t("contactUs")}
                 </Typography>
-                <Box sx={{ display: "flex", fontSize: "18px", justifyContent: "space-around" }}>
-                    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+                <Box sx={{
+                    display: "flex", fontSize: "18px", justifyContent: "space-around", "@media only screen and (max-width: 1000px)": {
+                        flexDirection: "column",
+                        gap: "16px"
+                    }
+                }}>
+                    <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px" }} textAlign={"center"}>
                         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <LocationOn />
-                            Address
+                            {t("address")}
                         </Box>
                         Romania, Brasov, Str. Vasile Carlova, Nr. 16
                     </Box>
                     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "10px" }}>
                         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <LocalPhone />
-                            Phone
+                            {t("phone")}
                         </Box>
                         0268 420 832
                     </Box>
@@ -68,9 +84,9 @@ const Support = () => {
                         <Paper sx={{ padding: 2 }}>
                             <Box sx={{ padding: 2 }}>
                                 <Typography variant="h6" gutterBottom sx={{ paddingBottom: 5 }}>
-                                    Request an offer
+                                    {t("requestAnOffer")}
                                 </Typography>
-                                <Grid container spacing={3} sx={{ padding: "0px !important" }}>
+                                <Grid container spacing={3} sx={{ padding: "0px !important", ml: 0, width: "100%" }}>
                                     <Grid item xs={12} sm={2} sx={{ padding: "12px 0px 0px 0px !important" }}>
                                         <InputLabel
                                             sx={{
@@ -79,7 +95,7 @@ const Support = () => {
                                                 fontWeight: 700
                                             }}
                                         >
-                                            Name
+                                            {t("name")}
                                         </InputLabel>
                                     </Grid>
                                     <Grid item xs={12} sm={10} sx={{ padding: "12px 0px 0px 0px !important" }}>
@@ -87,7 +103,7 @@ const Support = () => {
                                             required
                                             id="from_name"
                                             name="user_name"
-                                            label="Full Name"
+                                            label={t("fullName")}
                                             fullWidth
                                             size="medium"
                                             autoComplete="off"
@@ -125,7 +141,7 @@ const Support = () => {
                                                 fontWeight: 700
                                             }}
                                         >
-                                            Phone Number
+                                            {t("phone")}
                                         </InputLabel>
                                     </Grid>
                                     <Grid item xs={12} sm={10} sx={{ padding: "12px 0px 0px 0px !important" }}>
@@ -133,7 +149,7 @@ const Support = () => {
                                             required
                                             id="author"
                                             name="reply_to"
-                                            label="Phone Number"
+                                            label={t("phoneNumber")}
                                             fullWidth
                                             size="medium"
                                             autoComplete="off"
@@ -148,14 +164,14 @@ const Support = () => {
                                                 fontWeight: 700
                                             }}
                                         >
-                                            Message
+                                            {t("message")}
                                         </InputLabel>
                                     </Grid>
                                     <Grid item xs={12} sm={10} sx={{ padding: "12px 0px 0px 0px !important" }}>
                                         <TextField
                                             required
                                             id="outlined-multiline-static"
-                                            label="Message"
+                                            label={t("message")}
                                             multiline
                                             fullWidth
                                             rows={4}
@@ -176,7 +192,7 @@ const Support = () => {
                                         disabled={isLoading}
                                         endIcon={isLoading ? <CircularProgress size={20} /> : null}
                                     >
-                                        Send Offer
+                                        {t("sendRequest")}
                                     </Button>
                                 </CardActions>
                             </Box>
@@ -197,12 +213,12 @@ const Support = () => {
             <Snackbar
                 open={open}
                 anchorOrigin={{ vertical: "top", horizontal: "center" }}
-                message="Mail has been sent!"
+                message={t("mailHasBeenSent")}
                 autoHideDuration={3000}
                 onClose={() => setOpen(false)}
             >
                 <Alert severity="success" sx={{ width: '100%' }}>
-                    Mail has been sent!
+                    {t("mailHasBeenSent")}
                 </Alert>
             </Snackbar>
         </>

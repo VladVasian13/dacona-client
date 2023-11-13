@@ -12,14 +12,14 @@ const Dashboard = () => {
     return (
         <div className="dashboard-container">
             <div className="left-container">
-                <h1> Network, security, protection</h1>
+                <h1> {t("networkSecurityProtection")}</h1>
                 <p>
                     {t("homeDescription")}
                 </p>
                 <div className="search-container">
                     <TextField
                         variant="outlined"
-                        placeholder="Search for products"
+                        placeholder={t("searchForProducts")!}
                         inputProps={{
                             style: {
                                 color: "white",
@@ -46,7 +46,7 @@ const Dashboard = () => {
                             }
                         }}
                         InputProps={{
-                            endAdornment: <button className="searchButton">FIND A PRODUCT</button>,
+                            endAdornment: <button className="searchButton">{t("findAProduct")}</button>,
                             startAdornment: <SearchIcon />
                         }}
                     />
@@ -54,7 +54,7 @@ const Dashboard = () => {
             </div>
             <div className="right-container">
                 <div>
-                    Dacona most popular selling brand
+                    {t("daconaMostPopular")}
                 </div>
                 <div>
                     <img src={Teltonika} alt="Teltonika" style={{ width: "100%" }} />

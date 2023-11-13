@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { getSwitches } from '../../api/api';
 import { Box, Breadcrumbs, Button, Card, CardActions, CardContent, CircularProgress, Grid, IconButton, Link, Tooltip, Typography } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
+import { useNavigate } from 'react-router-dom';
 
 const TeltonikaSwitches = () => {
+
+    const navigate = useNavigate();
 
     const [switches, setSwitches] = useState([]);
     const [isLoading, setLoading] = useState(false);
@@ -41,10 +44,10 @@ const TeltonikaSwitches = () => {
                     <CircularProgress size="3rem" color='info' />
                 </Box>
                 :
-                <Grid container padding={6} spacing={6}>
+                <Grid container padding={6} spacing={6} sx={{ "@media only screen and (max-width: 1000px)": { marginLeft: 0, width: "100%" } }}>
                     {switches.map((switches: any, idx) => {
                         return (
-                            <Grid item xs={3} key={idx} sx={{ minWidth: 280, maxWidth: "400px !important" }}>
+                            <Grid item xs={3} key={idx} sx={{ minWidth: 280, maxWidth: "400px !important", "@media only screen and (max-width: 1000px)": { padding: "10px 10px !important" } }}>
                                 <Card sx={{
                                     display: "flex", alignItems: "center", justifyContent: "space-between", height: "100%", minWidth: 280, maxWidth: 400, backgroundColor: "rgb(18, 18, 18)", color: "#FFFFFF", flexDirection: "column"
                                 }}>
@@ -69,7 +72,7 @@ const TeltonikaSwitches = () => {
                                         </Typography>
                                     </CardContent>
                                     <CardActions sx={{ height: "100px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                        <Button size="small" variant='contained' sx={{ backgroundColor: "#008478", padding: 1, "&:hover": { backgroundColor: "#034640" } }}>Mode details</Button>
+                                        <Button size="small" variant='contained' onClick={() => { navigate(`/teltonika/switches/${switches.id}`) }} sx={{ backgroundColor: "#008478", padding: 1, "&:hover": { backgroundColor: "#034640" } }}>Mode details</Button>
                                     </CardActions>
                                 </Card>
                             </Grid>

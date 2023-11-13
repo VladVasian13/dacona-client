@@ -150,7 +150,7 @@ const NavBar = () => {
                                 </ListItemButton>
                             </ListItem>
                             <ListItem key={'Support'} disablePadding>
-                                <ListItemButton>
+                                <ListItemButton onClick={(e) => { navigate("/support") }}>
                                     <ListItemIcon>
                                         <HelpIcon sx={{ color: "#ffffff" }} />
                                     </ListItemIcon>

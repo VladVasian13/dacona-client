@@ -33,3 +33,10 @@ export const getProducts = async () => {
 
     return products
 }
+
+export const getProductById = async (id: number) => {
+    const response = await fetch(`${url}product/${id}`)
+    const products = await response.json()
+
+    return products
+}
